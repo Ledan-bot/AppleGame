@@ -27,4 +27,18 @@ public class Apple implements GamePiece {
   // If we bumped into something, keep a reference to that thing around for cleanup and removal
   GamePiece collided;
 
+  /**
+     * Create a default, Medium apple
+     */
+    public Apple(Physicist owner) {
+      this(owner, MEDIUM);
+  }
+
+  /**
+     * Create an Apple of the given size
+     */
+    public Apple(Physicist owner, int size) {
+      myPhysicist = owner;
+      setSize(size);
+  }
 }
